@@ -8,7 +8,9 @@ public class Mercadinho {
     private Proprietario proprietario;
     private Estoque estoque;
     
-    public Mercadinho() {}
+    public Mercadinho(String nome) {
+        this.nome = nome;
+    }
 
     public Mercadinho(String nome, Proprietario proprietario, Estoque estoque) {
         this.nome = nome;

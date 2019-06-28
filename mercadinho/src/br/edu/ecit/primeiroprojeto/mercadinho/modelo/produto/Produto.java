@@ -21,7 +21,7 @@ public abstract class Produto {
         this.valor = valor;
     }
 
-    public long getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
 

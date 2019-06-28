@@ -26,21 +26,23 @@ public class Estoque {
         return produtos.remove(produto);
     }
     
-    public Boolean atualizarProduto(int codigoProduto, Produto produtoAtualizado) {
-        Produto produtoRemovido = produtos.remove(codigoProduto);        
-        produtoRemovido.setDataFabricacao(produtoAtualizado.getDataFabricacao());
-        produtoRemovido.setDataValidade(produtoAtualizado.getDataValidade());
-        produtoRemovido.setDescricao(produtoAtualizado.getDescricao());
-        produtoRemovido.setValor(produtoAtualizado.getValor());
-        return produtos.add(produtoRemovido);
+    public Boolean atualizarProduto(Produto produtoAtualizado) {
+        Produto produto = buscarProdutoPorCodigo(produtoAtualizado.getCodigo());
+        return produtos.remove(produto) && produtos.add(produtoAtualizado);
     }
     
     public Produto buscarProdutoPorCodigo(int codigoProduto) {
-        return produtos.get(codigoProduto);
+        for (Produto produto : produtos) 
+            if (produto.getCodigo() == codigoProduto) return produto;
+        return null;
     }
     
     public int recuperarQuantidadeProdutosCadastrados() {
         return produtos.size();
+    }
+    
+    public List<Produto> listarTodosProdutos() {
+        return produtos;
     }
     
     public float valorTotalProdutos() {
