@@ -6,11 +6,9 @@ public final class Bebida extends Produto {
     
     private float graduacaoAlcoolica;
 
-    public Bebida(float graduacaoAlcoolica) {
-        this.graduacaoAlcoolica = graduacaoAlcoolica;
-    }
-
-    public Bebida(float graduacaoAlcoolica, String descricao, LocalDate dataFabricacao, LocalDate dataValidade, float valor) {
+    public Bebida(String descricao, LocalDate dataFabricacao, 
+            LocalDate dataValidade, float valor, 
+            float graduacaoAlcoolica) {
         super(descricao, dataFabricacao, dataValidade, valor);
         this.graduacaoAlcoolica = graduacaoAlcoolica;
     }
@@ -50,10 +48,10 @@ public final class Bebida extends Produto {
 
     @Override
     public String toString() {
-        return "Produto{" + "descricao=" + super.getDescricao() 
-                + ", dataFabricacao=" + super.getDataFabricacao() 
-                + ", dataValidade=" + super.getDataValidade()
-                + ", valor=" + super.getValor() 
+        return "Produto{" + "codigo=" + super.getCodigo() + ", descricao=" 
+                + super.getDescricao() + ", dataFabricacao=" 
+                + super.getDataFabricacao() + ", dataValidade=" 
+                + super.getDataValidade() + ", valor=" + super.getValor() 
                 + ", graduacaoAlcoolica=" + graduacaoAlcoolica + '}';
     }
     

@@ -5,14 +5,12 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public final class Limpeza extends Produto {
-    
-    private ClassificacaoProdutoLimpeza classificacaoLimpeza; 
 
-    public Limpeza(ClassificacaoProdutoLimpeza classificacaoLimpeza) {
-        this.classificacaoLimpeza = classificacaoLimpeza;
-    }
+    private ClassificacaoProdutoLimpeza classificacaoLimpeza;
 
-    public Limpeza(ClassificacaoProdutoLimpeza classificacaoLimpeza, String descricao, LocalDate dataFabricacao, LocalDate dataValidade, float valor) {
+    public Limpeza(String descricao, LocalDate dataFabricacao,
+            LocalDate dataValidade, float valor,
+            ClassificacaoProdutoLimpeza classificacaoLimpeza) {
         super(descricao, dataFabricacao, dataValidade, valor);
         this.classificacaoLimpeza = classificacaoLimpeza;
     }
@@ -52,11 +50,11 @@ public final class Limpeza extends Produto {
 
     @Override
     public String toString() {
-        return "Produto{" + "descricao=" + super.getDescricao() 
-                + ", dataFabricacao=" + super.getDataFabricacao() 
-                + ", dataValidade=" + super.getDataValidade()
-                + ", valor=" + super.getValor() 
+        return "Produto{" + "codigo=" + super.getCodigo() + ", descricao="
+                + super.getDescricao() + ", dataFabricacao="
+                + super.getDataFabricacao() + ", dataValidade="
+                + super.getDataValidade() + ", valor=" + super.getValor()
                 + ", classificacaoLimpeza=" + classificacaoLimpeza + '}';
     }
-        
+
 }

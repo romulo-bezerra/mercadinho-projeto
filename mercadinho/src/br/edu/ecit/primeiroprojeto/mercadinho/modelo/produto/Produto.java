@@ -5,18 +5,16 @@ import java.util.Objects;
 
 public abstract class Produto {
 
-    private static int codigo = 1;
+    private static int codigoSequencia;
+    private final int codigo;
     private String descricao;
     private LocalDate dataFabricacao;
     private LocalDate dataValidade;
     private float valor;
-
-    public Produto() {
-        Produto.codigo = codigo++;
-    }
     
-    public Produto(String descricao, LocalDate dataFabricacao, 
+    public Produto(String descricao, LocalDate dataFabricacao,
             LocalDate dataValidade, float valor) {
+        this.codigo = ++codigoSequencia;
         this.descricao = descricao;
         this.dataFabricacao = dataFabricacao;
         this.dataValidade = dataValidade;
@@ -102,9 +100,9 @@ public abstract class Produto {
 
     @Override
     public String toString() {
-        return "Produto{" + "descricao=" + descricao + ", dataFabricacao=" 
-                + dataFabricacao + ", dataValidade=" + dataValidade 
-                + ", valor=" + valor + '}';
+        return "Produto{" + "codigo=" + codigo + ", descricao=" + descricao
+                + ", dataFabricacao=" + dataFabricacao + ", dataValidade="
+                + dataValidade + ", valor=" + valor + '}';
     }
-        
+
 }

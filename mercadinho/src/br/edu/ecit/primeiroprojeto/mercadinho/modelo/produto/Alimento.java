@@ -8,13 +8,9 @@ public final class Alimento extends Produto {
 
     private ClassificacaoProdutoAlimento classificacaoAlimento;
 
-    public Alimento() {}
-    
-    public Alimento(ClassificacaoProdutoAlimento classificacaoAlimento) {
-        this.classificacaoAlimento = classificacaoAlimento;
-    }
-
-    public Alimento(ClassificacaoProdutoAlimento classificacaoAlimento, String descricao, LocalDate dataFabricacao, LocalDate dataValidade, float valor) {
+    public Alimento(String descricao, LocalDate dataFabricacao,
+            LocalDate dataValidade, float valor,
+            ClassificacaoProdutoAlimento classificacaoAlimento) {
         super(descricao, dataFabricacao, dataValidade, valor);
         this.classificacaoAlimento = classificacaoAlimento;
     }
@@ -54,11 +50,11 @@ public final class Alimento extends Produto {
 
     @Override
     public String toString() {
-        return "Produto{" + "descricao=" + super.getDescricao() 
-                + ", dataFabricacao=" + super.getDataFabricacao() 
-                + ", dataValidade=" + super.getDataValidade()
-                + ", valor=" + super.getValor() 
+        return "Produto{" + "codigo=" + super.getCodigo() + ", descricao="
+                + super.getDescricao() + ", dataFabricacao="
+                + super.getDataFabricacao() + ", dataValidade="
+                + super.getDataValidade() + ", valor=" + super.getValor()
                 + ", classificacaoAlimento=" + classificacaoAlimento + '}';
     }
-    
+
 }
