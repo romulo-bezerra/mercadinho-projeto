@@ -4,3 +4,4 @@
 ### Projeto Terceirizado
 * Valor: `R$ 100,00`
 * Adquirente: `Eduarda`
+* Nível: `Médio`
