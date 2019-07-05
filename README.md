@@ -6,4 +6,4 @@
 * Aluno(a): `Eduarda`
 * Nível: `Médio-Técnico`
 
->> Temporary project in this public line (Github).
+Temporary project in this public line (Github).
