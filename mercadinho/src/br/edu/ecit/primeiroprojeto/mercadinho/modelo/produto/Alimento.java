@@ -7,14 +7,14 @@ import java.util.Objects;
 public final class Alimento extends Produto {
 
     private ClassificacaoProdutoAlimento classificacaoAlimento;
-
+    
     public Alimento(String descricao, LocalDate dataFabricacao,
             LocalDate dataValidade, float valor,
             ClassificacaoProdutoAlimento classificacaoAlimento) {
         super(descricao, dataFabricacao, dataValidade, valor);
         this.classificacaoAlimento = classificacaoAlimento;
     }
-
+    
     public ClassificacaoProdutoAlimento getClassificacaoAlimento() {
         return classificacaoAlimento;
     }

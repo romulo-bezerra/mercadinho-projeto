@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Estoque {
+public final class Estoque {
 
     private final List<Produto> produtos;
     
@@ -22,8 +22,9 @@ public class Estoque {
         return false;
     }
     
-    public Boolean removerProduto(Produto produto) {
-        return produtos.remove(produto);
+    public Boolean removerProduto(int codigoProduto) {
+        Produto resultado = buscarProdutoPorCodigo(codigoProduto);
+        return produtos.remove(resultado);
     }
     
     public Boolean atualizarProduto(Produto produtoAtualizado) {

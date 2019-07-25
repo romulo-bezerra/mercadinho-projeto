@@ -2,11 +2,13 @@ package br.edu.ecit.primeiroprojeto.mercadinho.modelo;
 
 import java.util.Objects;
 
-public class Mercadinho {
+public final class Mercadinho {
 
     private String nome;
     private Proprietario proprietario;
     private Estoque estoque;
+    
+    public Mercadinho() { }
     
     public Mercadinho(String nome) {
         this.nome = nome;

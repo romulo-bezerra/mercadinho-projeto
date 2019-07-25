@@ -20,7 +20,7 @@ public abstract class Produto {
         this.dataValidade = dataValidade;
         this.valor = valor;
     }
-
+    
     public int getCodigo() {
         return codigo;
     }

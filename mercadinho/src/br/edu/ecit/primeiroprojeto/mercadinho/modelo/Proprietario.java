@@ -4,7 +4,7 @@ import br.edu.ecit.primeiroprojeto.mercadinho.modelo.enumeracao.Sexo;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Proprietario {
+public final class Proprietario {
 
     private String nome;
     private LocalDate nascimento;
